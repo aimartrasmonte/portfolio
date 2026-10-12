@@ -14,7 +14,7 @@ export const PROFILE = {
 // Formulari de contacte: crea un formulari gratuït a https://formspree.io
 // i enganxa aquí l'identificador (la part final de l'URL, p. ex. 'xyzabcd').
 // Si queda buit, el formulari mostra un avís i proposa escriure per email.
-export const FORMSPREE_ID = '';
+export const FORMSPREE_ID = 'https://formspree.io/f/xgaolnoe';
 
 // CV en els tres idiomes (fitxers dins de /public/cv/). Quan l'actualitzis,
 // canvia aquí el nom del fitxer; es descarrega amb aquest mateix nom.
