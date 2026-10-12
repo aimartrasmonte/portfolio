@@ -73,6 +73,11 @@ const ogImage = image
     <meta property="og:locale" content={LANG_LOCALE[lang]} />
     <meta property="og:site_name" content={PROFILE.name} />
     <meta name="twitter:card" content="summary_large_image" />
+
+    {/* Estadístiques de visites (GoatCounter): només a la web publicada, no amb `npm run dev` */}
+    {import.meta.env.PROD && (
+      <script is:inline data-goatcounter="https://aimartrasmonte.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    )}
   </head>
   <body>
     <a class="skip-link" href="#main">↓</a>
