@@ -24,6 +24,7 @@ Web estàtica feta amb [Astro](https://astro.build), en català, castellà i ang
 | "Sobre mi" (bio, habilitats, formació, foto) | `src/content/about/{ca,es,en}.md` |
 | Projectes | `src/content/projects/<slug>/` |
 | Colors (blau i taronja del CV), tema clar/fosc i tipografia | `src/styles/tokens.css` |
+| Comptador de visites (GoatCounter) | `src/layouts/BaseLayout.astro` (vegeu [Estadístiques de visites](#estadístiques-de-visites)) |
 
 ## Afegir o editar un projecte
 
@@ -82,6 +83,16 @@ El visor 3D fa servir el format **glTF binari (`.glb`)**.
 2. Copia'n l'identificador (la part final de `https://formspree.io/f/xxxxxxx`) a `FORMSPREE_ID`, dins de `src/config.ts`.
 
 Mentre no estigui configurat, el formulari mostra l'adreça d'email.
+
+## Estadístiques de visites
+
+Les visites es compten amb [GoatCounter](https://www.goatcounter.com), que és gratuït i no fa servir cookies (no cal bàner de consentiment).
+
+- **Tauler**: [aimartrasmonte.goatcounter.com](https://aimartrasmonte.goatcounter.com). Hi surten les visites, els visitants únics, les pàgines més vistes, d'on venen, el país i el navegador. Des d'allà també es poden exportar les dades a CSV.
+- **On és l'script**: al `<head>` de `src/layouts/BaseLayout.astro`. Només s'inclou a la web publicada (`npm run build`), no amb `npm run dev`. La pàgina arrel (`src/pages/index.astro`) no el porta perquè només redirigeix a l'idioma i comptaria cada entrada dues vegades.
+- **Visitants únics**: són una estimació. Sense cookies, GoatCounter no pot reconèixer exactament la mateixa persona d'un dia per l'altre.
+- **No comptar les teves visites**: al tauler, *Settings › Ignore IPs* (o obre la web una vegada amb `#toggle-goatcounter` al final de l'adreça per desactivar-lo en aquell navegador).
+- **Canviar de compte o treure-ho**: edita o esborra l'script de `BaseLayout.astro`.
 
 ## Publicar a GitHub Pages
 
